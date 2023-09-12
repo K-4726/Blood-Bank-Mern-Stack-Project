@@ -36,7 +36,6 @@ app.get("*", function (req, res) {
 });
 //port
 const PORT = process.env.PORT || 8080;
-app.get("/")
 //listen
 app.listen(PORT, () => {
   console.log(
