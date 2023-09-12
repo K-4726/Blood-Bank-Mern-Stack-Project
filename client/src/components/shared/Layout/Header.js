@@ -26,7 +26,7 @@ const Header = () => {
                 <BiUserCircle /> Welcome{" "}
                 {user?.name || user?.hospitalName || user?.organisationName}
                 &nbsp;
-                <span className="badge bg-secondary">{user?.role}</span>
+                <span className="badge" style={{ backgroundColor: 'limegreen' }}>{user?.role}</span>
               </p>
             </li>
             {location.pathname === "/" ||
@@ -34,13 +34,17 @@ const Header = () => {
             location.pathname === "/hospital" ? (
               <li className="nav-item mx-3">
                 <Link to="/analytics" className="nav-link">
+                <button className="homebtn">
                   Analytics
+                  </button>
                 </Link>
               </li>
             ) : (
               <li className="nav-item mx-3">
                 <Link to="/" className="nav-link">
+                <button className="homebtn">
                   Home
+                  </button>
                 </Link>
               </li>
             )}
